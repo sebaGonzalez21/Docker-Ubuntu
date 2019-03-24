@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ubuntu_test:
+    build: .
+    command: tail -f /dev/null
+    ports:
+     - "22:22"
+    restart: always
+#Eliminar Imagen y contenedores
+#docker rm $(docker ps -a -q)
+#docker rmi $(docker images -q)
